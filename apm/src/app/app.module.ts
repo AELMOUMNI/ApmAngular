@@ -8,12 +8,13 @@ import { RouterModule } from '@angular/router';
 import { WelcomeComponent } from './home/welcome.component';
 
 import { ProductModule } from './products/product.module';
+import { DocksModule } from './docks/docks.module';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     WelcomeComponent
-  ],
+   ],
   imports: [
     BrowserModule,
     HttpClientModule, // Add HttpClientModule to the import array of one of the application's Angular Module
@@ -22,7 +23,8 @@ import { ProductModule } from './products/product.module';
       {path:'', redirectTo:'welcome', pathMatch:'full'},
       {path: '**', redirectTo: 'welcome', pathMatch:'full'}
     ]), 
-    ProductModule
+    ProductModule,
+    DocksModule
   ],
   providers: [],
   bootstrap: [AppComponent]

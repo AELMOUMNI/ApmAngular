@@ -1,0 +1,44 @@
+<div class='card'>
+  <div class="card-header">
+      {{pageTitle}}
+  </div>
+  <div class="card-body">
+  </div>
+  <div class='table-responsive'>
+      <table class='table'
+              *ngIf='docks.length'>
+          <thead>
+              <tr>
+                  <th>name</th>
+                  <th>StationCode</th>
+                  <th>Ebike</th>
+                  <th>Mechanical</th>
+                  <th>DueDate</th>
+                  <th>Numbikesavailable</th>
+                  <th>Numdocksavailable</th>
+                  <th>Capacity</th>
+                  <th>IsRenting</th>
+                  <th>IsInstalled</th>
+                  <th>NomArrondissementCommunes</th>
+                  <th>IsReturning</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor='let dock of filteredDocks'>
+                <td>{{dock.name}}</td>
+                <td>{{dock.stationCode}}</td>
+                <td>{{dock.ebike}}</td>
+                <td>{{dock.mechanical}}</td>
+                <td>{{dock.dueDate | date: 'dd/MM/yyyy'}}</td>
+                <td>{{dock.numbikesavailable}}</td>
+                <td>{{dock.numdocksavailable}}</td>
+                <td>{{dock.capacity}}</td>
+                <td>{{dock.isRenting}}</td>
+                <td>{{dock.isInstalled}}</td>
+                <td>{{dock.nomArrondissementCommunes}}</td>
+                <td>{{dock.isReturning}}</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>

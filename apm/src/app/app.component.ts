@@ -18,6 +18,7 @@ import { Component } from '@angular/core';
     <a class='navbar-brand'> {{pageTitle}}</a>
     <ul class='nav nav-pills'>
       <li><a class='nav-link' routerLink='/welcome'>Home</a></li>
+      <li><a class='nav-link' routerLink='/docksavailable'>Station Disponible</a></li>
       <li><a class='nav-link' routerLink='/products'>Product List</a></li>
     </ul>
   </nav>
